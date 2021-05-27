@@ -3,7 +3,7 @@ package practica_1;
 import java.util.Scanner;
 
 //Clase que asocia un cliente con un mail y una contraseña
-public class Usuario {
+public class Usuario implements Datos{
 	
 	private Cliente cliente;
 	private String mail;
@@ -53,8 +53,10 @@ public class Usuario {
 	}
 
 
-	public void getDatos() {
+	public String getDatos() {
+		String s = "";
 		cliente.getDatos();
-		System.out.println(this.mail);
+		s = this.mail + "\n";
+		return s;
 	}
 }

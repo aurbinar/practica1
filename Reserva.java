@@ -1,11 +1,10 @@
 package practica_1;
 
-import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.Vector;
 
 //Clase que gestiona las distintas reservas que asocia un Hotel, una Habitacion y un usuario
-public class Reserva {
+public class Reserva implements Datos{
 	
 	private Hotel hotel;
 	private Usuario usuario;
@@ -69,9 +68,13 @@ public class Reserva {
 	}
 	
 	//Metodo para obtener los datos de la reserva
-	public void getDatos() {
-		System.out.println("Reserva realizada en el hotel " + this.hotel.getNombreHotel() + " en la habitacion " +
-						   this.habitacion.getNumeroHabitacion() + " a nombre de "); this.usuario.getDatos();
+	public String getDatos() {
+		String s ="";
+		s = "Reserva realizada en el hotel " + this.hotel.getNombreHotel() + " en la habitacion " +
+						   this.habitacion.getNumeroHabitacion() + " a nombre de "; this.usuario.getDatos();
+	    s+="\n";
+	   return s;
 	}
+	
 	
 }

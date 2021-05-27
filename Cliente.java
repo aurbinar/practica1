@@ -1,7 +1,7 @@
 package practica_1;
 
 //clase que guarda los datos de un cliente.
-public class Cliente {
+public class Cliente implements Datos{
 	private String nombre;
 	private String apellidos;
 	private String dni;
@@ -24,7 +24,10 @@ public class Cliente {
 		return dni;
 	}
 	
-	public void getDatos() {
-		System.out.println(this.dni + "\t" + this.apellidos + ", " + this.nombre);
+	public String getDatos() {
+		String s= "";
+		s = this.dni + "\t" + this.apellidos + ", " + this.nombre;
+		s+="\n";
+		return s;
 	}
 }

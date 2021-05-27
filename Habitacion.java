@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class Habitacion {
+public class Habitacion implements Datos{
 
 		private int numeroHabitacion;
 		private int numeroCamas;
@@ -133,15 +133,16 @@ public class Habitacion {
 		}
 		
 		//metodo get de la clase
-		public void getDatos() {
-			
+		public String getDatos() {
+			String s = "";
 			if(suit)
-				System.out.println("Suit ");
-			System.out.println("Habitacion " + Integer.toString(this.numeroHabitacion) + ".\n" 
-			+ Integer.toString(this.numeroCamas) + "  Camas.");
-			if(terraza) System.out.println("Con terraza");
-			if(jacuzzi) System.out.println("Con jacuzzi");
-			System.out.println();
+				s = "Suit " +
+			"Habitacion " + Integer.toString(this.numeroHabitacion) + ".\n" 
+			+ Integer.toString(this.numeroCamas) + "  Camas.";
+			if(terraza) s += "Con terraza";
+			if(jacuzzi) s += "Con jacuzzi";
+			s+= "\n";
+			return s;
 		
 		}
 

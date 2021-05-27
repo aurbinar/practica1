@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 //clase que guarda los datos de un Hotel
-public class Hotel {
+public class Hotel implements Datos{
 	
 	private String nombreHotel;
 	private String direccionHotel;
